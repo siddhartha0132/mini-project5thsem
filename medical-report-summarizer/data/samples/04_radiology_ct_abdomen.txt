@@ -1,0 +1,20 @@
+METRO IMAGING CENTRE
+CT SCAN KUB (PLAIN) REPORT
+(Synthetic sample report created for testing. Not a real patient.)
+
+Patient: Priya D. (fictional)   Age/Sex: 34 Y / F
+
+Clinical History:
+Right sided flank pain radiating to groin for 2 days, with burning micturition and vomiting.
+
+Findings:
+Right kidney measures 11.8 cm and shows moderate hydronephrosis with dilated proximal ureter.
+A 7 mm calculus is seen in the right distal ureter, about 2 cm above the vesicoureteric junction, causing obstruction.
+Mild perinephric fat stranding is seen on the right side.
+Left kidney measures 11.2 cm and is normal in size and position. A 3 mm non-obstructing calculus is seen in the lower pole of the left kidney.
+Urinary bladder is partially distended and shows no calculus.
+Liver, spleen and pancreas appear unremarkable. No free fluid in the abdomen.
+Appendix is normal.
+
+Impression:
+7 mm right distal ureteric calculus causing moderate right hydronephrosis. 3 mm non-obstructing left lower pole renal calculus. Suggest urology consultation.

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}How it works{% endblock %}
+{% block content %}
+<h1>How it works</h1>
+<p class="lead">Each report passes through an NLP pipeline of eight stages.</p>
+
+<ol class="pipeline">
+  <li><strong>Upload</strong><span>Text, PDF or a scanned image of the report.</span></li>
+  <li><strong>Text extraction</strong><span>PyMuPDF reads PDFs; Tesseract OCR reads scans after grayscale, contrast and threshold clean-up.</span></li>
+  <li><strong>Pre-processing</strong><span>Removes headers and page numbers, expands abbreviations (HTN → hypertension), detects sections and splits sentences.</span></li>
+  <li><strong>Medical NER</strong><span>A medical dictionary with negation detection, plus an optional BERT model (d4data/biomedical-ner-all), tags diseases, symptoms, drugs and procedures. Lab values are compared with reference ranges.</span></li>
+  <li><strong>Summarization</strong><span>Extractive: TextRank (TF-IDF + cosine similarity + PageRank) with medical boosts. Abstractive: a BART transformer ({{ model.split('/')[-1] }}). Hybrid: TextRank selects, BART rewrites.</span></li>
+  <li><strong>Fact check</strong><span>Every number and medical term in the summary must exist in the source; coverage of key facts is measured.</span></li>
+  <li><strong>Doctor summary</strong><span>The clinical summary with abnormal values highlighted.</span></li>
+  <li><strong>Patient summary</strong><span>Glossary-based simplification into plain language, with explanations of abnormal results. Readability is measured with the Flesch Reading Ease score.</span></li>
+</ol>
+
+<div class="card">
+  <h2>TextRank scoring</h2>
+  <p class="formula">WS(V<sub>i</sub>) = (1 − d) + d · Σ<sub>j</sub> [ w<sub>ji</sub> / Σ<sub>k</sub> w<sub>jk</sub> ] · WS(V<sub>j</sub>)</p>
+  <p>d = 0.85 (damping factor); w = cosine similarity between TF-IDF vectors of two sentences. The final score is multiplied
+     by a section weight (Diagnosis and Impression count most), an entity boost and an abnormal-lab boost.</p>
+</div>
+
+<div class="card">
+  <h2>Evaluation</h2>
+  <p>Run <code>python scripts/evaluate.py</code> to score all methods with ROUGE-1, ROUGE-2 and ROUGE-L against the
+     reference summaries in <code>data/references.json</code>.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+GREEN VALLEY HOSPITAL
+DISCHARGE SUMMARY
+(Synthetic sample report created for testing. Not a real patient.)
+
+Patient: Kabir N. (fictional)   Age: 22 years   Sex: Male
+
+Chief Complaint:
+High grade fever for 4 days with headache, body ache, pain behind the eyes and vomiting.
+
+History:
+No h/o bleeding from gums or nose. No h/o black stools. Patient lives in an area with recent dengue cases.
+
+Examination:
+Temperature 101.6 F, pulse 96/min, BP 104/68 mmHg. Mild dehydration. No rash. Abdomen soft, no hepatomegaly.
+
+Investigations:
+NS1 antigen positive. Dengue IgM negative.
+Hemoglobin 15.8 g/dL
+Total WBC count 2,900 /uL
+Platelet count 48,000 /uL on admission, lowest 32,000 /uL on day 2, 96,000 /uL at discharge.
+SGPT 88 U/L. SGOT 120 U/L.
+Ultrasound abdomen: mild gall bladder wall thickening, no free fluid.
+
+Diagnosis:
+Dengue fever with thrombocytopenia, without warning signs of severe dengue.
+
+Treatment Given:
+IV fluids, oral rehydration, paracetamol for fever and ondansetron for vomiting. Platelet count was monitored every 12 hours. No platelet transfusion was required. Fever subsided on day 3 of admission and platelet count improved steadily.
+
+Medications:
+Paracetamol 650 mg three times daily if fever
+Oral rehydration solution as needed
+
+Advice:
+Drink at least 3 litres of fluids daily. Avoid ibuprofen, aspirin and other painkillers apart from paracetamol. Return immediately if there is bleeding, severe abdominal pain or persistent vomiting.
+
+Follow up:
+Repeat platelet count after 2 days.

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Summarize{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Summarize a medical report</h1>
+  <p>Upload a discharge summary, lab report or scan report. MedSum extracts the key findings, flags abnormal
+     values, and writes one summary for doctors and one in plain language for patients.</p>
+</section>
+
+<form class="card form" method="post" action="{{ url_for('summarize') }}" enctype="multipart/form-data" id="form">
+  <div class="grid-2">
+    <div>
+      <label class="label" for="file">Upload a report</label>
+      <label class="dropzone" id="dropzone">
+        <input type="file" name="file" id="file" accept="{{ allowed }}">
+        <strong id="file-name">Choose a file or drag it here</strong>
+        <span>Text, PDF or image ({{ allowed }})</span>
+      </label>
+
+      <label class="label" for="samples">Or load a sample report</label>
+      <div class="samples" id="samples">
+        {% for name, title in samples %}
+          <button type="button" class="chip" data-name="{{ name }}">{{ title }}</button>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div>
+      <label class="label" for="text">Or paste the report text</label>
+      <textarea name="text" id="text" rows="12" placeholder="Paste the report here..."></textarea>
+      <input type="hidden" name="title" id="title">
+    </div>
+  </div>
+
+  <div class="options">
+    <fieldset>
+      <legend class="label">Summarization method</legend>
+      <label class="radio"><input type="radio" name="method" value="extractive" checked>
+        <span><strong>Extractive</strong> TextRank picks the key sentences. Fast, uses the report's own words.</span></label>
+      <label class="radio"><input type="radio" name="method" value="hybrid">
+        <span><strong>Hybrid</strong> TextRank selects, then the BART model rewrites them. Recommended.</span></label>
+      <label class="radio"><input type="radio" name="method" value="abstractive">
+        <span><strong>Abstractive</strong> BART reads the whole report and writes a new summary.</span></label>
+    </fieldset>
+
+    <div>
+      <label class="label" for="ratio">Summary length: <span id="ratio-out">30%</span> of sentences</label>
+      <input type="range" name="ratio" id="ratio" min="0.15" max="0.6" step="0.05" value="0.3">
+      <label class="check"><input type="checkbox" name="ner_model">
+        Also use the BERT biomedical NER model (slower, finds more terms)</label>
+    </div>
+  </div>
+
+  <button class="btn" type="submit" id="submit">Summarize report</button>
+  <p class="hint" id="wait" hidden>Working... the first transformer run loads the model and can take a minute.</p>
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const file = document.getElementById('file');
+  const fileName = document.getElementById('file-name');
+  const text = document.getElementById('text');
+  const title = document.getElementById('title');
+  const ratio = document.getElementById('ratio');
+  const ratioOut = document.getElementById('ratio-out');
+
+  file.addEventListener('change', () => {
+    fileName.textContent = file.files.length ? file.files[0].name : 'Choose a file or drag it here';
+  });
+  ratio.addEventListener('input', () => { ratioOut.textContent = Math.round(ratio.value * 100) + '%'; });
+
+  document.querySelectorAll('#samples .chip').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const res = await fetch('/sample/' + encodeURIComponent(btn.dataset.name));
+      const data = await res.json();
+      text.value = data.text;
+      title.value = data.title;
+      file.value = '';
+      fileName.textContent = 'Choose a file or drag it here';
+      document.querySelectorAll('#samples .chip').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+    });
+  });
+
+  document.getElementById('form').addEventListener('submit', () => {
+    document.getElementById('submit').disabled = true;
+    document.getElementById('submit').textContent = 'Summarizing...';
+    document.getElementById('wait').hidden = false;
+  });
+</script>
+{% endblock %}

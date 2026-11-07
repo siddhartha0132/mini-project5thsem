@@ -1,0 +1,43 @@
+SUNRISE MULTISPECIALITY HOSPITAL
+DISCHARGE SUMMARY - DEPARTMENT OF INTERNAL MEDICINE
+(Synthetic sample report created for testing. Not a real patient.)
+
+Patient: Sunita M. (fictional)   Age: 67 years   Sex: Female
+
+Presenting Complaints:
+Fever with chills for 5 days. Productive cough with yellow sputum for 4 days. Breathlessness for 2 days.
+
+History of Present Illness:
+67 year old female, known case of type 2 diabetes mellitus and COPD, presented with high grade fever, productive cough and breathlessness. She denies chest pain. No h/o recent travel. Appetite reduced.
+
+On Examination:
+Temperature 102.2 F, pulse 112/min, BP 110/70 mmHg, RR 28/min, SpO2 88% on room air. Crepitations heard in the right lower zone. Patient was conscious and oriented.
+
+Investigations:
+Total leukocyte count 16,400 /uL with neutrophilia.
+Hemoglobin 10.4 g/dL.
+CRP 96 mg/L.
+Random blood sugar 312 mg/dL.
+Serum creatinine 1.0 mg/dL. Sodium 131 mmol/L. Potassium 4.2 mmol/L.
+Chest X-ray: Right lower lobe consolidation with mild right pleural effusion.
+Sputum culture: Streptococcus pneumoniae, sensitive to ceftriaxone.
+
+Final Diagnosis:
+Community acquired pneumonia, right lower lobe. Acute exacerbation of COPD. Type 2 diabetes mellitus with poor glycemic control. Hyponatremia, mild.
+
+Course in Hospital:
+Patient was admitted to the ward and started on oxygen by nasal prongs, IV ceftriaxone and azithromycin, nebulization with salbutamol and ipratropium, and IV hydrocortisone. Insulin was started for blood sugar control. Fever subsided by day 3 and oxygen requirement reduced. On day 6 she was maintaining SpO2 95% on room air and was discharged in stable condition.
+
+Discharge Medications:
+Cefixime 200 mg twice daily for 5 days
+Budesonide inhaler twice daily
+Salbutamol inhaler as needed
+Insulin glargine 14 units at bedtime
+Metformin 500 mg twice daily
+Paracetamol 650 mg if needed for fever
+
+Advice:
+Complete the antibiotic course. Monitor blood sugar twice daily. Pneumococcal and influenza vaccination advised.
+
+Follow up:
+Review after 1 week with repeat chest X-ray and blood sugar chart.

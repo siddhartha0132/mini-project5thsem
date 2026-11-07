@@ -1,0 +1,43 @@
+PRECISION DIAGNOSTICS LABORATORY
+LABORATORY REPORT
+(Synthetic sample report created for testing. Not a real patient.)
+
+Patient: Arjun S. (fictional)   Age/Sex: 45 Y / M   Referred by: Dr. Mehta
+
+Complete Blood Count
+Hemoglobin 9.2 g/dL
+Total WBC count 7,200 /uL
+Platelet count 2.1 lakh
+ESR 34 mm/hr
+
+Diabetes Panel
+Fasting blood sugar 132 mg/dL
+Post-prandial blood sugar 205 mg/dL
+HbA1c 7.4 %
+
+Lipid Profile
+Total cholesterol 228 mg/dL
+Triglycerides 260 mg/dL
+HDL cholesterol 36 mg/dL
+LDL cholesterol 140 mg/dL
+
+Kidney Function Test
+Blood urea 28 mg/dL
+Serum creatinine 0.9 mg/dL
+Uric acid 8.1 mg/dL
+
+Liver Function Test
+Total bilirubin 0.8 mg/dL
+SGPT 78 U/L
+SGOT 52 U/L
+Albumin 4.1 g/dL
+
+Thyroid Profile
+TSH 6.8 mIU/L
+
+Vitamin D 14 ng/mL
+
+Impression:
+Microcytic picture with low hemoglobin suggestive of anemia. Raised blood sugar and HbA1c consistent with diabetes mellitus. Dyslipidemia with high triglycerides and low HDL. Mildly raised liver enzymes, which may suggest fatty liver. Raised TSH suggestive of subclinical hypothyroidism. Vitamin D deficiency. Clinical correlation is advised.
+
+Page 1 of 1

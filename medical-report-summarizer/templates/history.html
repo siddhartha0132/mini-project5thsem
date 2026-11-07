@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}History{% endblock %}
+{% block content %}
+<h1>History</h1>
+{% if items %}
+<div class="card">
+  <table>
+    <thead><tr><th>#</th><th>Report</th><th>Date</th><th>Method</th><th>Abnormal values</th><th>Shorter by</th></tr></thead>
+    <tbody>
+      {% for i in items %}
+      <tr>
+        <td>{{ i.id }}</td>
+        <td><a href="{{ url_for('report', report_id=i.id) }}">{{ i.title }}</a></td>
+        <td>{{ i.created_at }}</td>
+        <td>{{ i.method|capitalize }}</td>
+        <td>{{ i.abnormal }}</td>
+        <td>{{ i.compression }}%</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<p class="muted">No reports yet. <a href="{{ url_for('index') }}">Summarize one</a>.</p>
+{% endif %}
+{% endblock %}

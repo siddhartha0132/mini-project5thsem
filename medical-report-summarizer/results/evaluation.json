@@ -1,0 +1,264 @@
+{
+  "scores": {
+    "lead baseline": [
+      {
+        "report": "01_discharge_heart_attack.txt",
+        "rouge1": 0.2931937172774869,
+        "rouge2": 0.15873015873015872,
+        "rougeL": 0.17801047120418848,
+        "coverage": null,
+        "faithful": null,
+        "words": 76,
+        "readability": 50.6,
+        "seconds": 0.0010149160000000323
+      },
+      {
+        "report": "02_discharge_pneumonia.txt",
+        "rouge1": 0.2826086956521739,
+        "rouge2": 0.13186813186813184,
+        "rougeL": 0.18478260869565216,
+        "coverage": null,
+        "faithful": null,
+        "words": 78,
+        "readability": 42.4,
+        "seconds": 0.0009732910000010975
+      },
+      {
+        "report": "03_lab_report_blood.txt",
+        "rouge1": 0.4467005076142132,
+        "rouge2": 0.30769230769230765,
+        "rougeL": 0.4060913705583756,
+        "coverage": null,
+        "faithful": null,
+        "words": 78,
+        "readability": 53.8,
+        "seconds": 0.0008575000000003996
+      },
+      {
+        "report": "04_radiology_ct_abdomen.txt",
+        "rouge1": 0.33333333333333326,
+        "rouge2": 0.12903225806451615,
+        "rougeL": 0.17460317460317462,
+        "coverage": null,
+        "faithful": null,
+        "words": 76,
+        "readability": 51.3,
+        "seconds": 0.0008122909999990213
+      },
+      {
+        "report": "05_discharge_dengue.txt",
+        "rouge1": 0.2441860465116279,
+        "rouge2": 0.0588235294117647,
+        "rougeL": 0.1511627906976744,
+        "coverage": null,
+        "faithful": null,
+        "words": 75,
+        "readability": 68.6,
+        "seconds": 0.0008866659999995363
+      }
+    ],
+    "extractive": [
+      {
+        "report": "01_discharge_heart_attack.txt",
+        "rouge1": 0.45918367346938777,
+        "rouge2": 0.28865979381443296,
+        "rougeL": 0.25510204081632654,
+        "coverage": 20.7,
+        "faithful": true,
+        "words": 81,
+        "readability": 38.4,
+        "seconds": 0.02079483400000004
+      },
+      {
+        "report": "02_discharge_pneumonia.txt",
+        "rouge1": 0.5572139303482586,
+        "rouge2": 0.2914572864321608,
+        "rougeL": 0.44776119402985076,
+        "coverage": 57.1,
+        "faithful": true,
+        "words": 92,
+        "readability": 32.0,
+        "seconds": 0.01915879100000062
+      },
+      {
+        "report": "03_lab_report_blood.txt",
+        "rouge1": 0.5384615384615384,
+        "rouge2": 0.3506493506493506,
+        "rougeL": 0.4102564102564103,
+        "coverage": 61.9,
+        "faithful": true,
+        "words": 41,
+        "readability": 50.5,
+        "seconds": 0.01476358300000058
+      },
+      {
+        "report": "04_radiology_ct_abdomen.txt",
+        "rouge1": 0.549618320610687,
+        "rouge2": 0.3410852713178294,
+        "rougeL": 0.41221374045801523,
+        "coverage": 75.0,
+        "faithful": true,
+        "words": 78,
+        "readability": 38.8,
+        "seconds": 0.014303834000003235
+      },
+      {
+        "report": "05_discharge_dengue.txt",
+        "rouge1": 0.5189189189189188,
+        "rouge2": 0.24043715846994534,
+        "rougeL": 0.3567567567567568,
+        "coverage": 50.0,
+        "faithful": true,
+        "words": 88,
+        "readability": 41.2,
+        "seconds": 0.01676512499999916
+      }
+    ],
+    "hybrid": [
+      {
+        "report": "01_discharge_heart_attack.txt",
+        "rouge1": 0.5029940119760479,
+        "rouge2": 0.3393939393939394,
+        "rougeL": 0.34730538922155685,
+        "coverage": 10.3,
+        "faithful": true,
+        "words": 54,
+        "readability": 28.7,
+        "seconds": 7.330109791999999
+      },
+      {
+        "report": "02_discharge_pneumonia.txt",
+        "rouge1": 0.40506329113924044,
+        "rouge2": 0.15384615384615385,
+        "rougeL": 0.2151898734177215,
+        "coverage": 35.7,
+        "faithful": true,
+        "words": 51,
+        "readability": -4.7,
+        "seconds": 2.2027364589999987
+      },
+      {
+        "report": "03_lab_report_blood.txt",
+        "rouge1": 0.3134328358208955,
+        "rouge2": 0.12121212121212122,
+        "rougeL": 0.2686567164179104,
+        "coverage": 38.1,
+        "faithful": true,
+        "words": 27,
+        "readability": 9.2,
+        "seconds": 1.7619770419999998
+      },
+      {
+        "report": "04_radiology_ct_abdomen.txt",
+        "rouge1": 0.6041666666666666,
+        "rouge2": 0.2127659574468085,
+        "rougeL": 0.37499999999999994,
+        "coverage": 75.0,
+        "faithful": true,
+        "words": 45,
+        "readability": 22.6,
+        "seconds": 2.053030584000002
+      },
+      {
+        "report": "05_discharge_dengue.txt",
+        "rouge1": 0.32116788321167883,
+        "rouge2": 0.13333333333333333,
+        "rougeL": 0.16058394160583941,
+        "coverage": 21.4,
+        "faithful": true,
+        "words": 43,
+        "readability": 63.2,
+        "seconds": 1.7939947919999994
+      }
+    ],
+    "abstractive": [
+      {
+        "report": "01_discharge_heart_attack.txt",
+        "rouge1": 0.375,
+        "rouge2": 0.24050632911392408,
+        "rougeL": 0.2625,
+        "coverage": 6.9,
+        "faithful": true,
+        "words": 47,
+        "readability": 36.9,
+        "seconds": 2.14813775
+      },
+      {
+        "report": "02_discharge_pneumonia.txt",
+        "rouge1": 0.3949044585987261,
+        "rouge2": 0.15483870967741936,
+        "rougeL": 0.20382165605095542,
+        "coverage": 25.0,
+        "faithful": true,
+        "words": 50,
+        "readability": 19.3,
+        "seconds": 2.204503709000001
+      },
+      {
+        "report": "03_lab_report_blood.txt",
+        "rouge1": 0.42384105960264895,
+        "rouge2": 0.1342281879194631,
+        "rougeL": 0.3708609271523179,
+        "coverage": 57.1,
+        "faithful": true,
+        "words": 44,
+        "readability": -25.0,
+        "seconds": 1.9256959589999987
+      },
+      {
+        "report": "04_radiology_ct_abdomen.txt",
+        "rouge1": 0.5128205128205129,
+        "rouge2": 0.17391304347826084,
+        "rougeL": 0.3247863247863248,
+        "coverage": 75.0,
+        "faithful": true,
+        "words": 66,
+        "readability": 32.1,
+        "seconds": 1.6905420000000007
+      },
+      {
+        "report": "05_discharge_dengue.txt",
+        "rouge1": 0.2553191489361702,
+        "rouge2": 0.07194244604316548,
+        "rougeL": 0.17021276595744678,
+        "coverage": 42.9,
+        "faithful": true,
+        "words": 47,
+        "readability": 46.1,
+        "seconds": 2.204782082999998
+      }
+    ]
+  },
+  "summaries": {
+    "01_discharge_heart_attack.txt": {
+      "lead baseline": "CITY GENERAL HOSPITAL - DEPARTMENT OF CARDIOLOGY. DISCHARGE SUMMARY. (Synthetic sample report created for testing. Not a real patient.). Patient Name: Ramesh K. (fictional) Age/Sex: 58 Y / M. Date of Admission: 03/09/2026 Date of Discharge: 08/09/2026. patient presented with severe chest pain radiating to left arm for 2 hours, associated with sweating and shortness of breath. 58 year old male, known case of hypertension and type 2 diabetes mellitus for 10 years, on irregular medication.",
+      "extractive": "patient presented with severe chest pain radiating to left arm for 2 hours, associated with sweating and shortness of breath. 58 year old male, known case of hypertension and type 2 diabetes mellitus for 10 years, on irregular medication. hypertension for 10 years. type 2 diabetes mellitus for 10 years. Random blood sugar 286 mg/dL. LDL cholesterol 168 mg/dL. Acute anterior wall ST-elevation myocardial infarction. Type 2 diabetes mellitus, uncontrolled. Post procedure the patient was hemodynamically stable and chest pain resolved.",
+      "hybrid": "58 year old male was diagnosed with acute anterior wall ST-elevation myocardial infarction and type 2 diabetes mellitus, uncontrolled. He presented with severe chest pain radiating to left arm for 2 hours, associated with sweating and shortness of breath. Patient was taken up for emergency coronary angiography which showed 95% occlusion of proximal LAD.",
+      "abstractive": "58 year old male was diagnosed with acute anterior wall ST-elevation myocardial infarction and type 2 diabetes mellitus, uncontrolled. The patient presented with severe chest pain radiating to left arm for 2 hours. He is a smoker, 20 cigarettes per day for 30 years, on irregular medication."
+    },
+    "02_discharge_pneumonia.txt": {
+      "lead baseline": "SUNRISE MULTISPECIALITY HOSPITAL. DISCHARGE SUMMARY - DEPARTMENT OF INTERNAL MEDICINE. (Synthetic sample report created for testing. Not a real patient.). Patient: Sunita M. (fictional) Age: 67 years Sex: Female. Presenting Complaints: Fever with chills for 5 days. Productive cough with yellow sputum for 4 days. Breathlessness for 2 days. 67 year old female, known case of type 2 diabetes mellitus and chronic obstructive pulmonary disease, presented with high grade fever, productive cough and breathlessness. She denies chest pain.",
+      "extractive": "67 year old female, known case of type 2 diabetes mellitus and chronic obstructive pulmonary disease, presented with high grade fever, productive cough and breathlessness. Random blood sugar 312 mg/dL. Chest X-ray: Right lower lobe consolidation with mild right pleural effusion. Community acquired pneumonia, right lower lobe. Patient was admitted to the ward and started on oxygen by nasal prongs, intravenous ceftriaxone and azithromycin, nebulization with salbutamol and ipratropium, and intravenous hydrocortisone. Insulin was started for blood sugar control. Cefixime 200 mg twice daily for 5 days. Monitor blood sugar twice daily.",
+      "hybrid": "The patient was diagnosed with community acquired pneumonia, right lower lobe, acute exacerbation of chronic obstructive pulmonary disease, type 2 diabetes mellitus with poor glycemic control and hyponatremia, mild. Patient was admitted to the ward and started on oxygen by nasal prongs, intravenous ceftriaxone and azithromycin, nebulization with salbutamol and ipratropium.",
+      "abstractive": "The patient was diagnosed with community acquired pneumonia, right lower lobe, acute exacerbation of chronic obstructive pulmonary disease, type 2 diabetes mellitus with poor glycemic control and hyponatremia, mild. She denies chest pain. She was admitted to the ward and started on oxygen by nasal prongs, intravenous ceftriaxone and azithromycin."
+    },
+    "03_lab_report_blood.txt": {
+      "lead baseline": "PRECISION DIAGNOSTICS LABORATORY. LABORATORY REPORT. (Synthetic sample report created for testing. Not a real patient.). Patient: Arjun S. (fictional) Age/Sex: 45 Y / M Referred by: Dr. Mehta. Complete Blood Count. Hemoglobin 9.2 g/dL. Total WBC count 7,200 /uL. Platelet count 2.1 lakh. ESR 34 mm/hr. Diabetes Panel. Fasting blood sugar 132 mg/dL. Post-prandial blood sugar 205 mg/dL. HbA1c 7.4 %. Lipid Profile. Total cholesterol 228 mg/dL. Triglycerides 260 mg/dL. HDL cholesterol 36 mg/dL. LDL cholesterol 140 mg/dL.",
+      "extractive": "Fasting blood sugar 132 mg/dL. Post-prandial blood sugar 205 mg/dL. Total cholesterol 228 mg/dL. HDL cholesterol 36 mg/dL. LDL cholesterol 140 mg/dL. Uric acid 8.1 mg/dL. Raised blood sugar and HbA1c consistent with diabetes mellitus. Raised TSH suggestive of subclinical hypothyroidism.",
+      "hybrid": "The report shows microcytic picture with low hemoglobin suggestive of anemia, raised blood sugar and HbA1c consistent with diabetes mellitus, dyslipidemia with high triglycerides and low HDL.",
+      "abstractive": "The report shows microcytic picture with low hemoglobin suggestive of anemia, raised blood sugar and HbA1c consistent with diabetes mellitus, dyslipidemia with high triglycerides and low HDL, raised liver enzymes, raised TSH suggestive of subclinical hypothyroidism, vitamin D deficiency and clinical correlation is advised."
+    },
+    "04_radiology_ct_abdomen.txt": {
+      "lead baseline": "METRO IMAGING CENTRE. CT scan SCAN KUB (PLAIN) REPORT. (Synthetic sample report created for testing. Not a real patient.). Patient: Priya D. (fictional) Age/Sex: 34 Y / F. Right sided flank pain radiating to groin for 2 days, with burning micturition and vomiting. Right kidney measures 11.8 cm and shows moderate hydronephrosis with dilated proximal ureter. A 7 mm calculus is seen in the right distal ureter, about 2 cm above the vesicoureteric junction, causing obstruction.",
+      "extractive": "Right kidney measures 11.8 cm and shows moderate hydronephrosis with dilated proximal ureter. A 7 mm calculus is seen in the right distal ureter, about 2 cm above the vesicoureteric junction, causing obstruction. Left kidney measures 11.2 cm and is normal in size and position. A 3 mm non-obstructing calculus is seen in the lower pole of the left kidney. 7 mm right distal ureteric calculus causing moderate right hydronephrosis. 3 mm non-obstructing left lower pole renal calculus.",
+      "hybrid": "The report shows 7 mm right distal ureteric calculus causing moderate right hydronephrosis, 3 mm non-obstructing left lower pole renal calculus and suggest urology consultation. Right kidney measures 11.8cm and shows moderate hydronphrosis with dilated proximal ureters. Left kidney is normal in size and position.",
+      "abstractive": "The report shows 7 mm right distal ureteric calculus causing moderate right hydronephrosis, 3 mm non-obstructing left lower pole renal calculus and suggest urology consultation. Right sided flank pain radiating to groin for 2 days, with burning micturition and vomiting. Left kidney measures 11.2cm and is normal in size and position. Liver, spleen and pancreas appear unremarkable. Urinary bladder is partially distended and shows no calculus."
+    },
+    "05_discharge_dengue.txt": {
+      "lead baseline": "GREEN VALLEY HOSPITAL. DISCHARGE SUMMARY. (Synthetic sample report created for testing. Not a real patient.). Patient: Kabir N. (fictional) Age: 22 years Sex: Male. High grade fever for 4 days with headache, body ache, pain behind the eyes and vomiting. No history of bleeding from gums or nose. No history of black stools. Patient lives in an area with recent dengue cases. Temperature 101.6 F, pulse 96/min, blood pressure 104/68 mmHg. Mild dehydration. No rash.",
+      "extractive": "High grade fever for 4 days with headache, body ache, pain behind the eyes and vomiting. Platelet count 48,000 /uL on admission, lowest 32,000 /uL on day 2, 96,000 /uL at discharge. Ultrasound abdomen: mild gall bladder wall thickening, no free fluid. Dengue fever with thrombocytopenia, without warning signs of severe dengue. intravenous fluids, oral rehydration, paracetamol for fever and ondansetron for vomiting. Platelet count was monitored every 12 hours. Fever subsided on day 3 of admission and platelet count improved steadily. Repeat platelet count after 2 days.",
+      "hybrid": "Patient was diagnosed with dengue fever with thrombocytopenia. High grade fever for 4 days with headache, body ache, pain behind the eyes and vomiting. No history of bleeding from gums or nose. Patient lives in an area with recent cases of Dengue cases.",
+      "abstractive": "The patient was diagnosed with dengue fever with thrombocytopenia. The patient lives in an area with recent cases of the disease. No history of bleeding from gums or nose. No record of black stools and no history of vomiting. IVibuprofen, aspirin and other painkillers apart from paracetamol."
+    }
+  }
+}

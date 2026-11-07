@@ -1,0 +1,57 @@
+CITY GENERAL HOSPITAL - DEPARTMENT OF CARDIOLOGY
+DISCHARGE SUMMARY
+(Synthetic sample report created for testing. Not a real patient.)
+
+Patient Name: Ramesh K. (fictional)    Age/Sex: 58 Y / M
+Date of Admission: 03/09/2026    Date of Discharge: 08/09/2026
+
+Chief Complaint:
+Pt presented with severe CP radiating to left arm for 2 hours, associated with sweating and SOB.
+
+History of Present Illness:
+58 yo male, k/c/o HTN and T2DM for 10 years, on irregular medication. Pain started at rest, was crushing in nature and not relieved by rest. No h/o similar episodes in the past. He is a smoker, 20 cigarettes per day for 30 years.
+
+Past Medical History:
+HTN for 10 years. T2DM for 10 years. No h/o asthma or tuberculosis.
+
+On Examination:
+BP 160/100 mmHg, HR 108/min, RR 22/min, SpO2 93% on room air, Temperature 98.4 F. Patient was diaphoretic and anxious. Chest clear on auscultation.
+
+Investigations:
+ECG showed ST elevation in leads V1 to V4 suggestive of anterior wall STEMI.
+Troponin I 4.8 ng/mL
+Hemoglobin 13.1 g/dL
+WBC count 11,800 /uL
+Platelet count 2.4 lakh
+Serum creatinine 1.1 mg/dL
+Random blood sugar 286 mg/dL
+HbA1c 9.1 %
+Total cholesterol 242 mg/dL
+LDL cholesterol 168 mg/dL
+HDL cholesterol 34 mg/dL
+Triglycerides 210 mg/dL
+Echo: LVEF 40%, regional wall motion abnormality in LAD territory.
+
+Diagnosis:
+Acute anterior wall ST-elevation myocardial infarction. Hypertension. Type 2 diabetes mellitus, uncontrolled. Dyslipidemia.
+
+Hospital Course:
+Patient was taken up for emergency coronary angiography which showed 95% occlusion of proximal LAD. Primary percutaneous coronary intervention was done and a drug eluting stent was placed in LAD. Post procedure the patient was hemodynamically stable and chest pain resolved. Blood sugars were controlled with insulin and later shifted to oral drugs. He was counselled about smoking cessation.
+
+Discharge Medications:
+Aspirin 75 mg once daily
+Ticagrelor 90 mg twice daily
+Atorvastatin 80 mg at bedtime
+Metoprolol 25 mg twice daily
+Ramipril 2.5 mg once daily
+Metformin 500 mg twice daily
+Pantoprazole 40 mg once daily
+
+Advice on Discharge:
+Strict smoking cessation. Low salt, low fat diabetic diet. Do not stop aspirin or ticagrelor without consulting the cardiologist. Report immediately if chest pain recurs.
+
+Follow up:
+Review in cardiology OPD after 1 week with fasting lipid profile and HbA1c after 3 months.
+
+Page 1 of 1
+This is a computer generated report

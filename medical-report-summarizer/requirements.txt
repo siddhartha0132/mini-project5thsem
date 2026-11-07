@@ -1,0 +1,18 @@
+# Core (extractive summarization, NER, web app)
+flask>=2.3
+numpy>=1.24
+scikit-learn>=1.2
+networkx>=3.0
+PyMuPDF>=1.23
+Pillow>=9.0
+rouge-score>=0.1.2
+
+# Abstractive summarization and BERT-based NER
+torch>=2.6
+transformers>=4.40
+
+# Optional: OCR for scanned reports (also needs the Tesseract program: brew install tesseract)
+pytesseract>=0.3.10
+
+# Optional: BERTScore in scripts/evaluate.py --bertscore
+# bert-score>=0.3.13

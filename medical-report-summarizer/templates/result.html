@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block title %}{{ report.title }}{% endblock %}
+{% block content %}
+<div class="result-head">
+  <div>
+    <p class="eyebrow">Report #{{ report.id }} · {{ report.created_at }} · {{ r.method|capitalize }} ({{ r.model.split('/')[-1] }})</p>
+    <h1>{{ report.title }}</h1>
+  </div>
+  <div class="actions">
+    <a class="btn btn-quiet" href="{{ url_for('download', report_id=report.id) }}">Download .txt</a>
+    <button class="btn btn-quiet" onclick="window.print()">Print</button>
+    <a class="btn" href="{{ url_for('index') }}">New report</a>
+  </div>
+</div>
+
+{% for w in r.warnings %}<div class="flash flash-error">{{ w }}</div>{% endfor %}
+
+<div class="stats">
+  <div class="stat"><span>{{ r.stats.source_words }} → {{ r.stats.summary_words }}</span>words</div>
+  <div class="stat"><span>{{ r.stats.compression }}%</span>shorter</div>
+  <div class="stat"><span class="{{ 'bad' if r.abnormal_labs else 'good' }}">{{ r.abnormal_labs|length }}</span>abnormal values</div>
+  <div class="stat"><span>{{ r.factcheck.coverage }}%</span>key facts covered</div>
+  <div class="stat"><span class="{{ 'good' if r.factcheck.faithful else 'bad' }}">{{ 'Passed' if r.factcheck.faithful else 'Check' }}</span>fact check</div>
+  <div class="stat"><span>{{ r.stats.seconds }}s</span>processing time</div>
+</div>
+
+<div class="grid-2 summaries">
+  <section class="card">
+    <h2><span class="tag tag-doc">Doctor</span> Clinical summary</h2>
+    <p class="summary">{{ r.clinical_summary }}</p>
+    {% if r.abnormal_labs %}
+      <h3>Abnormal values</h3>
+      <ul class="flags">
+        {% for l in r.abnormal_labs %}
+          <li><span class="pill {{ 'pill-high' if l.status == 'HIGH' else 'pill-low' }}">{{ l.status }}</span>
+            <strong>{{ l.test }}</strong> {{ l.value }} {{ l.unit }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <p class="meta">Readability (Flesch): {{ r.stats.readability_clinical }}</p>
+  </section>
+
+  <section class="card card-patient">
+    <h2><span class="tag tag-pat">Patient</span> In simple words</h2>
+    <p class="summary">{{ r.patient.text }}</p>
+    {% if r.patient.conditions %}
+      <h3>Conditions found</h3>
+      <p>{{ r.patient.conditions|join(', ') }}</p>
+    {% endif %}
+    {% if r.patient.lab_notes %}
+      <h3>Your test results</h3>
+      <ul class="plain">{% for note in r.patient.lab_notes %}<li>{{ note }}</li>{% endfor %}</ul>
+    {% endif %}
+    {% if r.patient.medicines %}
+      <h3>Your medicines</h3>
+      <ul class="plain">{% for m in r.patient.medicines %}<li>{{ m }}</li>{% endfor %}</ul>
+    {% endif %}
+    <p class="meta">Readability (Flesch): {{ r.stats.readability_patient }} (original report: {{ r.stats.readability_source }})</p>
+  </section>
+</div>
+
+<section class="card">
+  <h2>Medical entities (NER)</h2>
+  <div class="entities">
+    {% for category, items in r.entities.items() %}
+      <div>
+        <h3>{{ category }}s <small>{{ items|length }}</small></h3>
+        {% for e in items %}
+          <span class="ent ent-{{ category|lower }} {{ 'neg' if e.negated }}" title="{{ 'negated (patient does NOT have this)' if e.negated else 'found by ' ~ e.source }}">{{ e.label }}</span>
+        {% else %}<span class="muted">None found</span>{% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+  <p class="meta">Crossed-out terms were mentioned as absent, e.g. "no history of asthma".</p>
+</section>
+
+<div class="grid-2">
+  <section class="card">
+    <h2>All lab values and vitals</h2>
+    {% if r.labs %}
+    <table>
+      <thead><tr><th>Test</th><th>Value</th><th>Normal range</th><th>Status</th></tr></thead>
+      <tbody>
+        {% for l in r.labs %}
+        <tr>
+          <td>{{ l.test }}</td>
+          <td>{{ l.value }} {{ l.unit }}</td>
+          <td>{{ l.low }} – {{ l.high }}</td>
+          <td><span class="pill {{ 'pill-high' if l.status == 'HIGH' else 'pill-low' if l.status == 'LOW' else 'pill-ok' }}">{{ l.status }}</span></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}<p class="muted">No lab values found in this report.</p>{% endif %}
+  </section>
+
+  <section class="card">
+    <h2>Fact check</h2>
+    <p>{% if r.factcheck.faithful %}Every number and medical term in the summary appears in the original report.
+       {% else %}Some content in the summary was not found in the original report. Please review it.{% endif %}</p>
+    {% if r.factcheck.unsupported_numbers %}<p><strong>Numbers not in source:</strong> {{ r.factcheck.unsupported_numbers|join(', ') }}</p>{% endif %}
+    {% if r.factcheck.new_words %}<p><strong>New words introduced by the model:</strong> {{ r.factcheck.new_words|join(', ') }}
+      <span class="muted">(check for typos or added details)</span></p>{% endif %}
+    {% if r.factcheck.unsupported_entities %}<p><strong>Terms not in source:</strong> {{ r.factcheck.unsupported_entities|join(', ') }}</p>{% endif %}
+    <p><strong>Key facts covered:</strong> {{ r.factcheck.coverage }}%
+      ({{ r.factcheck.covered|length }} terms, {{ r.factcheck.labs_covered }}/{{ r.factcheck.labs_total }} abnormal labs)</p>
+    {% if r.factcheck.missing %}<p class="muted">Not in summary text (see entity list): {{ r.factcheck.missing|join(', ') }}</p>{% endif %}
+
+    <h3>TextRank sentence scores</h3>
+    <ol class="scores">
+      {% for s in r.extractive_sentences %}
+        <li><span class="score">{{ s.score }}</span> <span class="muted">[{{ s.section }}]</span> {{ s.text }}</li>
+      {% endfor %}
+    </ol>
+  </section>
+</div>
+
+<details class="card">
+  <summary>Original report text</summary>
+  <pre class="source">{{ report.source_text }}</pre>
+</details>
+
+<form method="post" action="{{ url_for('delete', report_id=report.id) }}" class="delete-form">
+  <button class="link-danger" type="submit" onclick="return confirm('Delete this report?')">Delete this report</button>
+</form>
+{% endblock %}
